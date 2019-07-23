@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:clickable="true"
+    android:focusable="true"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/arrow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/global_keyline_16"
+        android:layout_marginLeft="@dimen/global_keyline_16"
+        android:layout_marginEnd="@dimen/global_keyline_32"
+        android:layout_marginRight="@dimen/global_keyline_32"
+        android:clickable="true"
+        android:focusable="true"
+        app:layout_constraintBottom_toBottomOf="@+id/title"
+        app:layout_constraintEnd_toStartOf="@+id/title"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/title"
+        app:srcCompat="@drawable/ic_back_24dp"
+        tools:ignore="UnusedAttribute" />
+
+    <TextView
+        android:id="@+id/title"
+        style="@style/Typography.Title1"
+        android:layout_width="0dp"
+        android:layout_height="?attr/actionBarSize"
+        app:layout_constraintEnd_toStartOf="@+id/reset_filter"
+        app:layout_constraintStart_toEndOf="@+id/arrow"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_goneMarginStart="@dimen/global_keyline_16"
+        tools:text="@string/filter_button" />
+
+    <TextView
+        android:id="@+id/reset_filter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/global_keyline_16"
+        android:layout_marginRight="@dimen/global_keyline_16"
+        android:textAllCaps="true"
+        android:textAppearance="@style/Typography.Button.Small"
+        android:textColor="@color/grey_4"
+        app:layout_constraintBaseline_toBaselineOf="@+id/title"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:text="@string/filter_reset_all" />
+
+    <TextView
+        android:id="@+id/from_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/filter_range_from"
+        android:textAppearance="@style/Typography.Caption.Dark"
+        app:layout_constraintStart_toStartOf="@+id/from"
+        app:layout_constraintTop_toTopOf="@+id/separator" />
+
+    <TextView
+        android:id="@+id/from"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/global_spacing_24"
+        android:layout_marginLeft="@dimen/global_spacing_24"
+        android:textAppearance="@style/Typography.Body1"
+        app:layout_constraintBottom_toBottomOf="@+id/separator"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/from_label"
+        tools:text="40 cm" />
+
+    <ImageView
+        android:id="@+id/separator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/global_spacing_24"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title"
+        app:srcCompat="@drawable/ic_backslash" />
+
+
+    <TextView
+        android:id="@+id/to_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/filter_range_to"
+        android:textAppearance="@style/Typography.Caption.Dark"
+        app:layout_constraintStart_toStartOf="@+id/to"
+        app:layout_constraintTop_toTopOf="@+id/separator" />
+
+    <TextView
+        android:id="@+id/to"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/global_spacing_24"
+        android:layout_marginEnd="@dimen/global_spacing_24"
+        android:textAppearance="@style/Typography.Body1"
+        app:layout_constraintBottom_toBottomOf="@+id/separator"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/from_label"
+        tools:text="40 cm" />
+
+
+    <ImageButton
+        android:id="@+id/from_minus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/global_spacing_16"
+        android:layout_marginLeft="@dimen/global_spacing_16"
+        android:layout_marginTop="@dimen/global_spacing_24"
+        android:background="@drawable/bg_circle"
+        android:scaleType="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/separator"
+        app:srcCompat="@drawable/ic_decrease"
+        tools:ignore="UnusedAttribute" />
+
+    <ImageButton
+        android:id="@+id/from_plus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/global_spacing_8"
+        android:layout_marginLeft="@dimen/global_spacing_8"
+        android:background="@drawable/bg_circle"
+        android:scaleType="center"
+        app:layout_constraintStart_toEndOf="@+id/from_minus"
+        app:layout_constraintTop_toTopOf="@+id/from_minus"
+        app:srcCompat="@drawable/ic_increase"
+        tools:alpha="0.3" />
+
+    <ImageButton
+        android:id="@+id/to_minus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/global_spacing_16"
+        android:layout_marginRight="@dimen/global_spacing_16"
+        android:background="@drawable/bg_circle"
+        android:scaleType="center"
+        app:layout_constraintEnd_toStartOf="@+id/to_plus"
+        app:layout_constraintTop_toTopOf="@+id/from_minus"
+        app:srcCompat="@drawable/ic_decrease" />
+
+    <ImageButton
+        android:id="@+id/to_plus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/global_spacing_16"
+        android:layout_marginRight="@dimen/global_spacing_16"
+        android:background="@drawable/bg_circle"
+        android:scaleType="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/from_minus"
+        app:srcCompat="@drawable/ic_increase" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/steppers"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="from_minus, from_plus, to_minus, to_plus" />
+
+    <com.jaygoo.widget.RangeSeekBar
+        android:id="@+id/range"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/global_spacing_16"
+        android:layout_marginTop="@dimen/global_spacing_24"
+        android:layout_marginEnd="@dimen/global_spacing_16"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/separator"
+        app:rsb_mode="range"
+        app:rsb_progress_color="@color/emerald"
+        app:rsb_progress_default_color="@color/grey_3"
+        app:rsb_progress_height="4dp"
+        app:rsb_progress_radius="2dp"
+        app:rsb_tick_mark_mode="number" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

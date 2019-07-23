@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name" translatable="false">Example</string>
+
+    <!-- Filters -->
+    <string name="filter_button">Filtry</string>
+    <string name="sort_button">Řazení</string>
+    <string name="filter_number_of_active">%1$d aktivní</string>
+    <string name="filter_all">Vše</string>
+    <string name="filter_range_from">Od</string>
+    <string name="filter_range_to">Do</string>
+    <string name="filter_apply">Filtrovat</string>
+    <string name="filter_reset_all">Zrušit vše</string>
+    <string name="filter_reset_selected">Zrušit vybrané</string>
+    <string name="sort_default">Výchozí</string>
+    <string name="sort_price_min">Nejlevnější nahoru</string>
+    <string name="sort_price_max">Nejdražší nahoru</string>
+    <string name="sort_new">Nejnovější nahoru</string>
+    <string name="filter_info_title">Řazení a filtrování</string>
+    <string name="filter_info_subtitle">Opět jsme zjednodušili cestu k vašim vysněným kouskům. V kategoriích nyní můžete produkty řadit a filtrovat.</string>
+    <string name="filter_no_results">Mrzí nás to, ale aktuálně nemáme žádný produkt odpovídající vaší volbě.</string>
+    <string name="filter_no_resulst_button">Upravit filtry</string>
+    <string name="filter_try_button">Vyzkoušet</string>
+
+</resources>

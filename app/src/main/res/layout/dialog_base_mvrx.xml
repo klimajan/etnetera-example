@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/dialog_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/global_keyline_16"
+        android:layout_marginLeft="@dimen/global_keyline_16"
+        android:layout_marginTop="@dimen/global_spacing_24"
+        android:layout_marginEnd="@dimen/global_keyline_16"
+        android:layout_marginRight="@dimen/global_keyline_16"
+        android:layout_marginBottom="@dimen/global_spacing_8"
+        android:textAppearance="@style/Typography.Title3"
+        tools:text="Title" />
+
+    <com.airbnb.epoxy.EpoxyRecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="@dimen/global_keyline_16" />
+
+</LinearLayout>

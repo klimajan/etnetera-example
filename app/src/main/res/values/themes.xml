@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <style name="Theme.Light" parent="@style/Theme.MaterialComponents.Light.Bridge">
+        <item name="windowActionBar">false</item>
+        <item name="windowActionModeOverlay">true</item>
+        <item name="windowNoTitle">true</item>
+        <item name="homeAsUpIndicator">@drawable/ic_back_24dp</item>
+        <item name="android:windowLightStatusBar" tools:targetApi="23">true</item>
+        <item name="android:statusBarColor" tools:targetApi="21">@color/theme_status_bar</item>
+
+        <item name="colorPrimary">@color/white</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorControlNormal">@color/grey_4</item>
+        <item name="colorControlActivated">@color/colorAccent</item>
+    </style>
+</resources>

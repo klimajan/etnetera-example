@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="activity_transition_duration">250</integer>
+    <integer name="login_anim_duration">250</integer>
+    <integer name="fade_anim_duration">250</integer>
+    <integer name="product_add_anim_duration">750</integer>
+    <integer name="shimmer_effect_duration">1500</integer>
+</resources>

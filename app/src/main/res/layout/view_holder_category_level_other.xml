@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable name="category" type="com.example.android.data.model.Category" />
+        <variable name="listener" type="android.view.View.OnClickListener" />
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="@{listener}"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="@dimen/card_radius"
+        app:cardElevation="@dimen/shadow_small"
+        app:cardUseCompatPadding="true">
+
+        <TextView
+            android:id="@+id/subcategory_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="@dimen/global_keyline_16"
+            android:layout_marginLeft="@dimen/global_keyline_16"
+            android:layout_marginTop="@dimen/global_spacing_8"
+            android:layout_marginEnd="@dimen/global_keyline_16"
+            android:layout_marginRight="@dimen/global_keyline_16"
+            android:layout_marginBottom="@dimen/global_spacing_8"
+            android:minLines="2"
+            android:maxLines="2"
+            android:gravity="center_vertical"
+            android:text="@{category.name}"
+            android:textAppearance="@style/Typography.Body2.Dark"
+            tools:text="Jídelní židle"/>
+
+    </androidx.cardview.widget.CardView>
+</layout>

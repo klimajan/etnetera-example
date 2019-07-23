@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.navigation.NavigationView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="end"
+    android:fitsSystemWindows="false">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:id="@+id/filter_container"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <FrameLayout
+            android:id="@+id/filter_button_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/emerald">
+
+            <Button
+                android:id="@+id/filter_button"
+                style="@style/Typography.Button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:minHeight="@dimen/view_button_size"
+                android:paddingLeft="@dimen/global_spacing_16"
+                android:paddingRight="@dimen/global_spacing_16"
+                android:text="@string/filter_apply"
+                android:textColor="@color/white" />
+
+        </FrameLayout>
+
+    </LinearLayout>
+
+</com.google.android.material.navigation.NavigationView>

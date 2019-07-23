@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <import type="com.example.android.R" />
+        <variable name="name" type="String" />
+        <variable name="values" type="String" />
+        <variable name="hasActiveFilters" type="boolean" />
+        <variable name="listener" type="android.view.View.OnClickListener" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/selectableItemBackground"
+        android:clickable="true"
+        android:focusable="true"
+        android:paddingStart="@dimen/global_keyline_16"
+        android:paddingTop="@dimen/global_spacing_12"
+        android:paddingEnd="@dimen/global_keyline_16"
+        android:paddingBottom="@dimen/global_spacing_12"
+        android:onClick="@{listener}">
+
+        <TextView
+            android:id="@+id/filter_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/Typography.Body2.Dark"
+            android:text="@{name}"
+            app:layout_constraintBottom_toTopOf="@+id/filter_values"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Dostupnost" />
+
+        <TextView
+            android:id="@+id/filter_values"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/global_spacing_2"
+            android:textAppearance="@{hasActiveFilters == true ? R.style.Typography_Body2_Bold : R.style.Typography_Body2}"
+            android:text="@{values}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/filter_name"
+            tools:text="Vše"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

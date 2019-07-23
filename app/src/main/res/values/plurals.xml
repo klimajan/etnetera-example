@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <plurals name="subcategory_count" tools:ignore="UnusedQuantity">
+        <item quantity="zero">Žádné podkategorie</item>
+        <item quantity="one">%%1$d podkategorie</item>
+        <item quantity="few">%1$d podkategorie</item>
+        <item quantity="other">%1$d podkategorií</item>
+    </plurals>
+
+</resources>

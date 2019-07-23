@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="app_text_size_display1">34sp</dimen> 
+    <dimen name="app_text_size_headline">20sp</dimen>
+     <dimen name="app_text_size_title">18sp</dimen> 
+    <dimen name="app_text_size_subtitle">16sp</dimen> 
+    <dimen name="app_text_size_subtitle_small">10sp</dimen> 
+    <dimen name="app_text_size_head">16sp</dimen> 
+    <dimen name="app_text_size_subhead">14sp</dimen> 
+    <dimen name="app_text_size_caption">13sp</dimen>
+     <dimen name="app_text_size_body">12sp</dimen> 
+    <dimen name="app_text_size_subbody">11sp</dimen>
+     <dimen name="app_text_size_button">15sp</dimen>
+
+    <dimen name="global_keyline_16">16dp</dimen>
+    <dimen name="global_keyline_20">20dp</dimen>
+    <dimen name="global_keyline_32">32dp</dimen>
+    <dimen name="global_keyline_72">72dp</dimen>
+
+    <dimen name="global_spacing_0">0dp</dimen>
+    <dimen name="global_spacing_2">2dp</dimen>
+    <dimen name="global_spacing_4">4dp</dimen>
+    <dimen name="global_spacing_8">8dp</dimen>
+    <dimen name="global_spacing_12">12dp</dimen>
+    <dimen name="global_spacing_16">16dp</dimen>
+    <dimen name="global_spacing_24">24dp</dimen>
+    <dimen name="global_spacing_28">28dp</dimen>
+    <dimen name="global_spacing_32">32dp</dimen>
+    <dimen name="global_spacing_48">48dp</dimen>
+    <dimen name="global_spacing_56">56dp</dimen>
+    <dimen name="global_spacing_72">72dp</dimen>
+    <dimen name="global_spacing_88">88dp</dimen>
+
+    <dimen name="global_elevation_2">2dp</dimen>
+    <dimen name="global_elevation_4">4dp</dimen>
+    <dimen name="global_elevation_6">6dp</dimen>
+    <dimen name="global_elevation_8">8dp</dimen>
+    <dimen name="global_elevation_12">12dp</dimen>
+    <dimen name="global_elevation_16">16dp</dimen>
+    <dimen name="global_elevation_24">24dp</dimen>
+
+    <dimen name="global_text_size_display_4">112sp</dimen>
+    <dimen name="global_text_size_display_3">56sp</dimen>
+    <dimen name="global_text_size_display_2">45sp</dimen>
+    <dimen name="global_text_size_display_1">30sp</dimen>
+    <dimen name="global_text_size_headline">24sp</dimen>
+    <dimen name="global_text_size_title">18sp</dimen>
+    <dimen name="global_text_size_subhead">14sp</dimen>
+    <dimen name="global_text_size_body_2">13sp</dimen>
+    <dimen name="global_text_size_body_1">12sp</dimen>
+    <dimen name="global_text_size_caption">12sp</dimen>
+    <dimen name="global_text_size_button">15sp</dimen>
+    <dimen name="global_text_size_menu">16sp</dimen>
+
+    <dimen name="shadow_small">2dp</dimen>
+    <dimen name="shadow_large">4dp</dimen>
+    <dimen name="card_radius">4dp</dimen>
+
+    <dimen name="view_button_size">48dp</dimen>
+</resources>

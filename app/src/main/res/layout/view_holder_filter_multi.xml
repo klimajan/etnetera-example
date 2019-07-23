@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable name="name" type="String" />
+        <variable name="count" type="Integer" />
+        <variable name="enabled" type="boolean" />
+        <variable name="selected" type="boolean" />
+        <variable name="listener" type="android.view.View.OnClickListener" />
+        <import type="com.example.android.R" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:focusable="true"
+        android:onClick="@{listener}"
+        android:paddingStart="@dimen/global_spacing_12"
+        android:paddingLeft="@dimen/global_spacing_12"
+        android:paddingTop="@dimen/global_spacing_12"
+        android:paddingEnd="@dimen/global_keyline_16"
+        android:paddingRight="@dimen/global_keyline_16"
+        android:paddingBottom="@dimen/global_spacing_12" >
+
+        <CheckBox
+            android:id="@+id/radio_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="@{selected}"
+            android:enabled="@{enabled}"
+            android:clickable="false"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/filter_name"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:checked="true"/>
+
+        <TextView
+            android:id="@+id/filter_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/global_spacing_28"
+            android:layout_marginLeft="@dimen/global_spacing_28"
+            android:layout_marginEnd="@dimen/global_spacing_8"
+            android:layout_marginRight="@dimen/global_spacing_8"
+            android:text="@{name}"
+            android:textAppearance="@{selected ? R.style.Typography_Body2_Dark_Bold : R.style.Typography_Body2_Dark}"
+            android:alpha="@{enabled ? 1f : 0.4f}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/filter_count"
+            app:layout_constraintStart_toEndOf="@+id/radio_button"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:textAppearance="@style/Typography.Body2.Dark"
+            tools:text="Skladem" />
+
+        <TextView
+            android:id="@+id/filter_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/global_spacing_8"
+            android:layout_marginRight="@dimen/global_spacing_8"
+            android:textAppearance="@style/Typography.Body2"
+            android:text="@{count}"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:text="20"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

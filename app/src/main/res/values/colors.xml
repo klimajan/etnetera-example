@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- NEW COLOR SYSTEM -->
+    <color name="black">#2B2B2B</color>
+    <color name="grey_4">#8B8B8B</color>
+    <color name="grey_3">#E0E0E0</color>
+    <color name="grey_2">#F1F1F1</color>
+    <color name="grey_1">#F7F7F7</color>
+    <color name="white">#FFFFFF</color>
+    <color name="emerald">#33BF79</color>
+    <color name="darkblue">#3F4753</color>
+    <color name="red">#EA5B53</color>
+    <color name="yellow">#FFBF10</color>
+
+    <color name="theme_status_bar">#9b9b9b</color>
+
+</resources>

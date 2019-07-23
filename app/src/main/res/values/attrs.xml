@@ -1,0 +1,8 @@
+<resources>
+
+    <declare-styleable name="ShimmerView">
+        <attr name="autoStart" format="boolean" />
+        <attr name="animScale" format="float" />
+        <attr name="animDrawable" format="reference" />
+    </declare-styleable>
+</resources>
