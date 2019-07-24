@@ -9,8 +9,10 @@ import androidx.appcompat.app.AppCompatDelegate
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ProcessLifecycleOwner
 import androidx.multidex.MultiDex
+import androidx.work.WorkManager
 
 import com.example.android.di.DaggerAppComponent
+import com.example.android.di.WorkerFactory
 import com.example.android.utility.LocaleContextWrapper
 import com.example.android.utility.Logcat
 
@@ -27,6 +29,7 @@ import io.reactivex.plugins.RxJavaPlugins
 class App : android.app.Application(), HasActivityInjector, HasSupportFragmentInjector {
     @Inject lateinit var dispatchingActivityInjector: DispatchingAndroidInjector<Activity>
     @Inject lateinit var dispatchingFragmentInjector: DispatchingAndroidInjector<Fragment>
+    @Inject lateinit var workerFactory: WorkerFactory
     @Inject lateinit var lifecycleObserver: LifecycleObserver
 
 
@@ -48,6 +51,10 @@ class App : android.app.Application(), HasActivityInjector, HasSupportFragmentIn
 
         // RxJava2 Global error handling
         RxJavaPlugins.setErrorHandler { e -> Logcat.d(e.toString()) }
+
+        // WorkerManager
+        WorkManager.initialize(this, androidx.work.Configuration.Builder().setWorkerFactory(workerFactory).build())
+
     }
 
     override fun onConfigurationChanged(newConfig: Configuration) {

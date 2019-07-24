@@ -29,14 +29,13 @@ class CategoryListViewModel @AssistedInject constructor(@Assisted initState: Cat
     }
 
     init {
-        categoryRepo.getTopLevelCategories().execute {
-            onSuccess(it) { categories ->
-                copy(categories = categories)
+        with(categoryRepo) {
+            scheduleFetchCategories()
+            getTopLevelCategories().execute {
+                onSuccess(it) { categories ->
+                    copy(categories = categories)
+                }
             }
         }
-    }
-
-    override fun onStart() {
-        categoryRepo.fetchCategories().execute { copy() }
     }
 }

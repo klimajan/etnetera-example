@@ -109,6 +109,7 @@ android {
 ext {
     lifecycle_version = "2.0.0"
     room_version = "2.2.0-alpha01"
+    work_version = "2.1.0"
     rxJavaVersion = '2.2.3'
     rxAndroidVersion = '2.1.1'
     retrofitVersion = '2.5.0'
@@ -144,6 +145,10 @@ dependencies {
     implementation "androidx.room:room-rxjava2:$room_version"
     androidTestImplementation "androidx.room:room-testing:$room_version"
     kapt "androidx.room:room-compiler:$room_version"
+
+    // Work
+    implementation "androidx.work:work-runtime-ktx:$work_version"
+    implementation "androidx.work:work-rxjava2:$work_version"
 
     // Android support libraries
     implementation 'androidx.appcompat:appcompat:1.0.2'

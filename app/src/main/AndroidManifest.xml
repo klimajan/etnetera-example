@@ -34,6 +34,13 @@
             android:name="com.example.android.ui.category.CategoryActivity"
             android:screenOrientation="portrait" />
 
+        <!-- Worker -->
+        <provider
+            android:name="androidx.work.impl.WorkManagerInitializer"
+            android:authorities="${applicationId}.workmanager-init"
+            android:enabled="false"
+            android:exported="false" />
+
     </application>
 
 </manifest>
